@@ -1,0 +1,28 @@
+{
+	"firstName": "Aniket",
+	"lastName": "Sahoo",
+	"id": 123,
+	"email": "xyz@gmail.com",
+	"jobs": [
+		"Tester",
+		"Developer"
+	],
+	"boardMarks": [
+		{
+			"english": 95,
+			"maths": 98
+		},
+		{
+			"english": 86,
+			"maths": 96
+		}
+	],
+	"favfoods": {
+		"breakfast": "bread",
+		"lunch": "rice",
+		"dinner": [
+			"Roti",
+			"Sabji"
+		]
+	}
+}

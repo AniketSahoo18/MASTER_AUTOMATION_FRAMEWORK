@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="API Automation" data-provider-thread-count="1">
+
+	<listeners>
+
+		<listener class-name="listeners.TestListener" />
+
+	</listeners>
+
+	<test name="API Test" thread-count="1">
+
+		<classes>
+
+			<!-- <class name="tests.api.LibraryAPITest" /> -->
+
+			<class name="tests.api.PlaceAPITest" />
+			
+
+
+
+		</classes>
+
+	</test>
+
+</suite>
+
