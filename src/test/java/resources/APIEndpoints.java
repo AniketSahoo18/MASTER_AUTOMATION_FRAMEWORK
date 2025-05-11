@@ -5,7 +5,7 @@ public enum APIEndpoints {
 	// Place API resources
 	
 	AddPlaceAPI("/maps/api/place/add/json"),
-	getPlaceAPI("/maps/api/place/get/json"),
+	GetPlaceAPI("/maps/api/place/get/json"),
 	deletePlaceAPI("/maps/api/place/delete/json"),
 	
 	// Library API resources

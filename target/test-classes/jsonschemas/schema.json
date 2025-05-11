@@ -2,59 +2,27 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "location": {
-      "type": "object",
-      "properties": {
-        "lat": {
-          "type": "number"
-        },
-        "lng": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "lat",
-        "lng"
-      ]
-    },
-    "accuracy": {
-      "type": "integer"
-    },
-    "name": {
+    "status": {
       "type": "string"
     },
-    "phone_number": {
+    "place_id": {
       "type": "string"
     },
-    "address": {
+    "scope": {
       "type": "string"
     },
-    "types": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "string"
-        }
-      ]
-    },
-    "website": {
+    "reference": {
       "type": "string"
     },
-    "language": {
+    "id": {
       "type": "string"
     }
   },
   "required": [
-    "location",
-    "accuracy",
-    "name",
-    "phone_number",
-    "address",
-    "types",
-    "website",
-    "language"
+    "status",
+    "place_id",
+    "scope",
+    "reference",
+    "id"
   ]
 }

@@ -20,18 +20,24 @@ public class FrameworkConstants {
 	private static final int IMPLICITWAIT = 10;
 	private static final int EXPLICITWAIT = 10;
 
-	private static final String REPORTBASEPATH = System.getProperty("user.dir") + "/reports/";
+	private static final String EXTENTREPORTBASEPATH = System.getProperty("user.dir") + "/reports/ExtentReports/";
+	private static final String ALLUREREPORTBASEPATH = System.getProperty("user.dir") + "/reports/AllureReports/";
 
 	private static String timeStamp = new SimpleDateFormat("dd-MM-yyyy_HH.mm.ss").format(new Date());
-	private static final String FOLDERNAME = "ExtentReports_" + timeStamp;
+	private static final String EXTENTREPORTFOLDERNAME = "ExtentReports_" + timeStamp;
+	private static final String ALLUREREPORTFOLDERNAME = "AllureReports_" + timeStamp;
 
 	static {
 
 		try {
 
-			File file = new File((REPORTBASEPATH + coreUtil.ConfigFactory.getConfig().executionMode() + "_Reports/" + FOLDERNAME));
+			File extentReportFile = new File((EXTENTREPORTBASEPATH + coreUtil.ConfigFactory.getConfig().executionMode() + "_Reports/" + EXTENTREPORTFOLDERNAME));
 
-			file.mkdir();
+			extentReportFile.mkdir();
+
+			File allureReportFile = new File((ALLUREREPORTBASEPATH + coreUtil.ConfigFactory.getConfig().executionMode() + "_Reports/" + ALLUREREPORTFOLDERNAME));
+
+			allureReportFile.mkdir();
 
 		} catch (Exception e) {
 
@@ -40,10 +46,16 @@ public class FrameworkConstants {
 
 	}
 
-	public static String getExtentreportpath() throws Exception {
+	public static String getExtentReportpath() throws Exception {
 
-		return REPORTBASEPATH + coreUtil.ConfigFactory.getConfig().executionMode() + "_Reports/" + FOLDERNAME + "/"
+		return EXTENTREPORTBASEPATH + coreUtil.ConfigFactory.getConfig().executionMode() + "_Reports/" + EXTENTREPORTFOLDERNAME + "/"
 				+ coreUtil.ConfigFactory.getConfig().executionMode() + ".html";
+
+	}
+
+	public static String getAllureReportpath() throws Exception {
+
+		return ALLUREREPORTBASEPATH + coreUtil.ConfigFactory.getConfig().executionMode() + "_Reports/" + ALLUREREPORTFOLDERNAME;
 
 	}
 

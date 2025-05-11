@@ -6,6 +6,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 
 import coreUtil.EmailSender;
+import reports.AllureReportUtil;
 import reports.ExtentManager;
 import reports.ExtentReportUtil;
 
@@ -22,6 +23,7 @@ public class TestListener implements ITestListener {
 	public void onFinish(ITestContext context) {
 
 		ExtentReportUtil.flushReports(extentReports);
+		AllureReportUtil.openReport();
 		
 //		EmailSender.sendEmail();
 
@@ -29,7 +31,7 @@ public class TestListener implements ITestListener {
 	
 //	public void onTestFailure(ITestResult result) {
 //		
-//		ExtentLogger.
+//
 //	}
 
 }

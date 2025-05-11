@@ -4,7 +4,7 @@
 
 	<listeners>
 		<listener class-name="listeners.TestListener" />
-		<listener class-name="listeners.AnnotationTransformer" />
+<!--		<listener class-name="listeners.AnnotationTransformer" />-->
 
 		<!-- -->
 
@@ -16,7 +16,11 @@
 	<test name="Ecommerce Test" thread-count="2">
 		<classes>
 
-			<class name="tests.gui.EcommerceTestExcel" />
+			<class name="runner.gui.EcommerceTestExcel">
+				<methods>
+					<include name="ecommerceFashion_Test"/>
+				</methods>
+			</class>
 
 		</classes>
 	</test>

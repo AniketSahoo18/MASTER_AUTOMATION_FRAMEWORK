@@ -5,7 +5,7 @@ import org.testng.Assert;
 
 import coreUtil.ValidationUtil.Validations;
 import enums.WaitStrategy;
-import baseUtil.DriverManager;
+import baseFactory.DriverFactory;
 import dataUtil.TestUtil;
 
 public class CartPage extends TestUtil {
@@ -20,7 +20,7 @@ public class CartPage extends TestUtil {
 
 			// Checking product is added in Cart
 
-			Boolean match = DriverManager.getDriver().findElements(CARTPRODUCTS_TXT).stream()
+			Boolean match = driver.findElements(CARTPRODUCTS_TXT).stream()
 					.anyMatch(cartProduct -> cartProduct.getText().equals(productName));
 
 			Assert.assertTrue(match);

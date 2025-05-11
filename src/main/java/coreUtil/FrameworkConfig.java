@@ -5,7 +5,7 @@ import org.aeonbits.owner.Config;
 @Config.Sources({ "file:${user.dir}/src/main/resources/properties/config.properties" })
 
 public interface FrameworkConfig extends Config {
-	
+
 	String url();
 
 	@DefaultValue("chrome")
@@ -27,5 +27,8 @@ public interface FrameworkConfig extends Config {
 
 	String requestType();
 	String baseUrl();
+
+	String userName();
+	String password();
 
 }

@@ -6,7 +6,7 @@ import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
-import baseUtil.TestBase;
+import baseFactory.TestBase;
 
 import java.io.FileOutputStream;
 import java.io.PrintStream;

@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Test to check Fashion Item Order from Ecommerce Website","31950","ecommerceFashion_Test","Default Suite","Sat May 10 12:34:39 IST 2025","passed","Sat May 10 12:35:11 IST 2025","runner.gui.EcommerceTestExcel","MasterSeleniumJavaFramework","runner.gui.EcommerceTestExcel","ecommerceFashion_Test"

@@ -15,7 +15,7 @@ public final class ExtentReportUtil {
 
 		try {
 
-			ExtentSparkReporter sparkReport = new ExtentSparkReporter(FrameworkConstants.getExtentreportpath());
+			ExtentSparkReporter sparkReport = new ExtentSparkReporter(FrameworkConstants.getExtentReportpath());
 
 			sparkReport.config().setDocumentTitle("Test Results");
 			sparkReport.config().setReportName(coreUtil.ConfigFactory.getConfig().executionMode() + " Automation Result");
@@ -28,6 +28,8 @@ public final class ExtentReportUtil {
 		catch (Exception e) {
 
 			e.printStackTrace();
+
+			System.out.println("Failed to Create Report");
 		}
 
 		return extentReport;
@@ -39,11 +41,13 @@ public final class ExtentReportUtil {
 
 			extentReport.flush();
 			ExtentManager.unload();
-			Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentreportpath()).toURI());
+			Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportpath()).toURI());
 
 		} catch (Exception e) {
 
 			e.printStackTrace();
+
+			System.out.println("Failed to Flush Report");
 		}
 	}
 

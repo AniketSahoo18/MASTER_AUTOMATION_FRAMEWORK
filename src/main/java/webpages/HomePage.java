@@ -2,12 +2,13 @@ package webpages;
 
 import java.time.Duration;
 
+import coreUtil.WaitUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import coreUtil.ValidationUtil.Validations;
 import enums.WaitStrategy;
-import baseUtil.DriverManager;
+import baseFactory.DriverFactory;
 import dataUtil.TestUtil;
 
 public class HomePage extends TestUtil {
@@ -24,39 +25,30 @@ public class HomePage extends TestUtil {
 
 		try {
 
-			WebElement prod = DriverManager.getDriver().findElements(PRODUCTS_TXT).stream()
+			WebElement prod = driver.findElements(PRODUCTS_TXT).stream()
 					.filter(product -> getText(product, PRODUCT_TXT).equals(productName)).findFirst().orElse(null);
 			
-			wait(WaitStrategy.INVISIBLE, POPUP_LINK);
-			
+			WaitUtil.wait(WaitStrategy.INVISIBLE, POPUP_LINK);
 			scrollIntoElement(prod, PRODUCT_LINK);
-			
-			wait(3000);
+			WaitUtil.waitFor(3000);
 			
 			click(prod, PRODUCT_LINK, Duration.ofSeconds(10));
 
-			wait(WaitStrategy.VISIBLE, POPUP_LINK);
-			wait(WaitStrategy.INVISIBLE, ANIMATION_LINK);
+			WaitUtil.wait(WaitStrategy.VISIBLE, POPUP_LINK);
+			WaitUtil.wait(WaitStrategy.INVISIBLE, ANIMATION_LINK);
 
 			// Click Cart
 			
 			scrollIntoElement(CART_LINK);
-			
-			wait(3000);
+			WaitUtil.waitFor(3000);
 
 			click(CART_LINK, WaitStrategy.CLICKABLE);
-			
-			wait(3000);
 
-			if (check) {
+			WaitUtil.waitFor(3000);
 
-				Validations.validationCheck("hard", "boolean", getWebElement(MYCART), "", "", steps, true);
+			if (check) {Validations.validationCheck("hard", "boolean", getWebElement(MYCART), "", "", steps, true);}
 
-			} else {
-
-				Validations.stepInfo(steps);
-
-			}
+			else {Validations.stepInfo(steps);}
 
 		}
 

@@ -2,7 +2,7 @@ package reports;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import dataUtil.TestUtil;
+import coreUtil.ScreenshotUtil;
 
 public class ExtentLogger {
 
@@ -34,7 +34,7 @@ public class ExtentLogger {
 		if (coreUtil.ConfigFactory.getConfig().passedstepsscreenshots() && isScreenshotNeeded) {
 
 			ExtentManager.getExtentTest().log(Status.PASS, steps + message,
-					MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getBase64Image()).build());
+					MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtil.getBase64Image()).build());
 		}
 
 		else {
@@ -48,7 +48,7 @@ public class ExtentLogger {
 		if (coreUtil.ConfigFactory.getConfig().failedstepsscreenshots() && isScreenshotNeeded) {
 
 			ExtentManager.getExtentTest().log(Status.FAIL, steps + message,
-					MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getBase64Image()).build());
+					MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtil.getBase64Image()).build());
 		}
 
 		else {
@@ -62,7 +62,7 @@ public class ExtentLogger {
 		if (coreUtil.ConfigFactory.getConfig().skippedstepsscreenshots() && isScreenshotNeeded) {
 
 			ExtentManager.getExtentTest().log(Status.SKIP, steps + message,
-					MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getBase64Image()).build());
+					MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtil.getBase64Image()).build());
 		}
 
 		else {
@@ -76,7 +76,7 @@ public class ExtentLogger {
 		if (coreUtil.ConfigFactory.getConfig().infostepsscreenshots() && isScreenshotNeeded) {
 
 			ExtentManager.getExtentTest().log(Status.INFO, steps,
-					MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getBase64Image()).build());
+					MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtil.getBase64Image()).build());
 		}
 
 		else {

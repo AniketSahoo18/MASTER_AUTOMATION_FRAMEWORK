@@ -24,11 +24,17 @@ public class ResponseAssert extends AbstractAssert<ResponseAssert, Response>{
         return this;
     }
 
+    public void isSuccessfulGetResponse(){
+
+        Assertions.assertThat(actual.getStatusCode())
+                .withFailMessage(()->"Status Code is NOT 200")
+                .isEqualTo(200);
+    }
+
     public void hasHeaderApplicationJson() {
 
         Assertions.assertThat(actual.header("Content-Type"))
                 .withFailMessage(()-> "Header with Content-Type as Application/Json is not present")
                 .contains("application/json");
-
     }
 }

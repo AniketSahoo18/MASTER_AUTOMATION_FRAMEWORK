@@ -1,0 +1,71 @@
+{
+  "product": "XYZ",
+  "covers": [
+    {
+      "StartDate": "14/02/2025",
+      "expiryDate": "19/02/2025",
+      "coverCode": "ABC",
+      "coverName": "Apple Ball Cat",
+      "premium": "",
+      "attributes": [
+        {
+          "name": "Cover Duration",
+          "value": "6"
+        },
+        {
+          "name": "Duration Unit",
+          "value": "Days"
+        },
+        {
+          "name": "Cover SI",
+          "value": "100000"
+        }
+      ],
+      "deleteIndicator": null
+    },
+    {
+      "StartDate": "14/02/2025",
+      "expiryDate": "19/02/2025",
+      "coverCode": "DEF",
+      "coverName": "Dog Elephant Fox",
+      "premium": "",
+      "attributes": [
+        {
+          "name": "Cover Duration",
+          "value": "6"
+        },
+        {
+          "name": "Duration Unit",
+          "value": "Days"
+        },
+        {
+          "name": "Cover SI",
+          "value": "200000"
+        }
+      ],
+      "deleteIndicator": null
+    },
+    {
+      "StartDate": "14/02/2025",
+      "expiryDate": "19/02/2025",
+      "coverCode": "GHI",
+      "coverName": "Giraffe Hen Ibis",
+      "premium": "",
+      "attributes": [
+        {
+          "name": "Cover Duration",
+          "value": "6"
+        },
+        {
+          "name": "Duration Unit",
+          "value": "Days"
+        },
+        {
+          "name": "Cover SI",
+          "value": "300000"
+        }
+      ],
+      "deleteIndicator": null
+    }
+  ]
+}

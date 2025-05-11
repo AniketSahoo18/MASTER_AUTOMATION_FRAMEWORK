@@ -14,7 +14,7 @@
 
 			<!-- <class name="tests.api.LibraryAPITest" /> -->
 
-			<class name="tests.api.PlaceAPITest" />
+			<class name="runner.api.MapAPITest" />
 			
 
 

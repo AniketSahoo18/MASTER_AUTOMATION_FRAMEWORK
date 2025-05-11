@@ -60,7 +60,7 @@ public class EmailSender {
 			
 			// Attachment Part
 			MimeBodyPart attachmentPart = new MimeBodyPart();
-			String filePath = FrameworkConstants.getExtentreportpath();
+			String filePath = FrameworkConstants.getExtentReportpath();
 //			String filePath = System.getProperty("user.dir") + "/reports/report.html";
 			
 			System.out.println("Attachment path is - " + filePath);
